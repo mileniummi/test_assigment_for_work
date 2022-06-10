@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/test_assigment_for_work/static/css/main.c43bd4d2.css",
+    "main.js": "/test_assigment_for_work/static/js/main.2d4d19bc.js",
+    "index.html": "/test_assigment_for_work/index.html",
+    "main.c43bd4d2.css.map": "/test_assigment_for_work/static/css/main.c43bd4d2.css.map",
+    "main.2d4d19bc.js.map": "/test_assigment_for_work/static/js/main.2d4d19bc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c43bd4d2.css",
+    "static/js/main.2d4d19bc.js"
+  ]
+}

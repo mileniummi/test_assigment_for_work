@@ -3,10 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Posts from "./pages/Posts";
 import Layout from "./pages/Layout";
 import Post from "./components/posts/Post";
-
-const NoMatch = () => {
-  return <p>There's nothing here: 404!</p>;
-};
+import NotFound from "./components/errors/NotFound";
 
 const App: React.FC = () => {
   return (
@@ -14,7 +11,7 @@ const App: React.FC = () => {
       <Route path="/" element={<Layout />}>
         <Route path="/posts/:id" element={<Post />} />
         <Route index element={<Posts />} />
-        <Route path="*" element={<NoMatch />} />
+        <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
   );

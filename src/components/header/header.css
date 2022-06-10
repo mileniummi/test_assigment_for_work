@@ -1,0 +1,22 @@
+.header{
+    background-color: var(--dark-green);
+    box-shadow: 0 4px 4px 0 #00000040;
+}
+.header__wrapper{
+    max-width: 1316px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.header__item{
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    padding: 23px 25px;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+.header__item.active{
+    background-color: var(--light-green);
+}

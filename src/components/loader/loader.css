@@ -1,0 +1,14 @@
+.loader{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+    margin: 51px auto 0;
+}
+
+.loader__text{
+    margin-top: 20px;
+    font-size: 20px;
+    color: var(--navy);
+}

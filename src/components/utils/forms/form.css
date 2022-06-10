@@ -1,0 +1,82 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__input__wrapper{
+    position: relative;
+}
+
+.form__input{
+    font-family: "Roboto", sans-serif;
+    border: 2px solid black;
+    padding: 10px 5px 12px;
+    outline: none;
+    border-radius: 5px;
+    background-color: white;
+    margin-bottom: 15px;
+    font-weight: 500;
+    width: 100%;
+    font-size: 18px;
+    opacity: .8;
+    min-width: 450px;
+}
+.form__label{
+    z-index: 2;
+    visibility: hidden;
+    position: absolute;
+    left: 5px;
+    font-size: 14px;
+    background-color: white;
+    padding: 0 3px 3px;
+    transition: visibility 0s,  transform .3s ease-in-out;
+}
+
+.form__input:focus{
+    opacity: 1;
+}
+
+
+.form__input:focus + .form__label{
+    background-color: black;
+    color: white;
+    visibility: visible;
+    transform: translateY(-10px);
+}
+
+.form__label.active{
+    visibility: visible;
+    transform: translateY(-10px);
+    background-color: white;
+    color: black;
+}
+
+.form__button{
+    cursor: pointer;
+    position: relative;
+    font-family: "Source Sans Pro", sans-serif;
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    outline: 0;
+    padding: 10px 50px 10px;
+    border: none;
+    box-shadow: none;
+    margin: 20px 0 20px;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 800px){
+    .form__input{
+        min-width: 350px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .form__input {
+        min-width: unset;
+    }
+}

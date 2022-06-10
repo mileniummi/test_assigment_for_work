@@ -3,18 +3,12 @@ import React from "react";
 interface FormProps {
   keyword: string;
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  handleFindClick: () => void;
+  handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
 }
 
-const PostSearchForm: React.FC<FormProps> = ({ keyword, handleChange, handleFindClick }) => {
+const PostSearchForm: React.FC<FormProps> = ({ keyword, handleChange, handleSubmit }) => {
   return (
-    <form
-      onSubmit={(event) => {
-        event.preventDefault();
-        handleFindClick();
-      }}
-      className="posts-search-form"
-    >
+    <form onSubmit={handleSubmit} className="posts-search-form">
       <div className="form__input__wrapper">
         <input
           type="text"
@@ -22,11 +16,10 @@ const PostSearchForm: React.FC<FormProps> = ({ keyword, handleChange, handleFind
           placeholder="search keyword"
           name="keyword"
           onChange={handleChange}
-          onSubmit={(event) => event.persist()}
         />
         <label className={keyword === "" ? "form__label" : "form__label active"}>search keyword</label>
       </div>
-      <button onClick={handleFindClick} type="button" className="form__button posts-search-button">
+      <button type="submit" className="form__button posts-search-button">
         Find
       </button>
     </form>

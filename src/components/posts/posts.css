@@ -27,10 +27,28 @@
 .posts-search-button{
     padding: 12px 20px 14px;
     border-radius: 5px;
-    background-color: var(--dark-green);
+    background-color: var(--navy);
+    box-sizing: content-box;
     margin-left: 10px;
+    transition: background-color,color .2s linear;
+    border: 1px solid white;
+}
+
+.posts-search-button:hover{
+    border-color: var(--navy);
+    background-color: var(--light-gray);
+    color: black;
 }
 
 .post__body{
     margin-top: 10px;
+}
+
+@media screen and (max-width: 800px){
+    .posts-search-form{
+        margin: 20px;
+    }
+    .post__wrapper{
+        margin: 20px;
+    }
 }

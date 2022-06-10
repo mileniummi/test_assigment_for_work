@@ -9,9 +9,6 @@ const Header: React.FC = () => {
         <NavLink to="/" className="header__item">
           Posts
         </NavLink>
-        {/*<NavLink to="/favourites" className="header__item">*/}
-        {/*  Любимые котики*/}
-        {/*</NavLink>*/}
       </div>
     </header>
   );

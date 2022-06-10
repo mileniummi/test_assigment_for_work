@@ -19,14 +19,15 @@ const PostList: React.FC = () => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setKeyword(e.target.value);
   };
-  const handleFindClick = () => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     setPage(1);
     setSearchKeyword(keyword);
   };
 
   return (
     <>
-      <PostSearchForm keyword={keyword} handleFindClick={handleFindClick} handleChange={handleInputChange} />
+      <PostSearchForm keyword={keyword} handleSubmit={handleSubmit} handleChange={handleInputChange} />
       <div className="post__wrapper">
         {isLoading ? (
           <Loader message={"LoadingPosts"} />
